@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.keras import layers, models, initializers
 
 def create_model(learning_rate):
-    inputs = layers.Input(shape=(128, 1))  # Input shape matches X_train
+    inputs = layers.Input(shape=(128, 1))  # Input: H_LS = [Re(H_LS) Im(H_LS)]
 
     x = inputs
     for i in range(10):

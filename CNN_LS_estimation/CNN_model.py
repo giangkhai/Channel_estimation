@@ -1,24 +1,20 @@
 import tensorflow as tf
-from tensorflow.keras import layers, models, initializers
-def create_model(learning_rate):
-    inputs = layers.Input(shape=(2*K, 1))  
+from tensorflow.keras import layers, models
 
-
-    x = inputs
-    for i in range(10):
-        x = layers.Conv1D(5, kernel_size=64, activation='relu', padding='same')(x)
+def create_dncnn_model(learning_rate):
+    inputs = layers.Input(shape=(2*K, 1))
+    x = layers.Conv1D(64, kernel_size=3, padding='same', activation='relu')(inputs)
+    for _ in range(15):
+        x = layers.Conv1D(64, kernel_size=3, padding='same', activation=None)(x)
         x = layers.BatchNormalization()(x)
-        x = layers.Dropout(0.5)(x)
+        x = layers.Activation('relu')(x)
 
- 
-    x = layers.Flatten()(x)
+    output_layer = layers.Conv1D(1, kernel_size=3, padding='same', activation=None)(x)
 
-   
-    output_layer = layers.Dense(2*K, activation='linear', use_bias=False,
-                                kernel_initializer='glorot_uniform')(x)
-    output_layer = layers.Reshape((2*K, 1))(output_layer)
+    output_layer = layers.Add()([inputs, output_layer])
 
-    model = models.Model(inputs=inputs, outputs=output_layer, name="cnn_model")
+
+    model = models.Model(inputs=inputs, outputs=output_layer, name="dncnn_model")
 
 
     model.summary()
@@ -29,4 +25,4 @@ def create_model(learning_rate):
     return model
 
 
-cnn_model = create_model(learning_rate=1e-3 / 2)
+cnn_model = create_dncnn_model(learning_rate=1e-4)

@@ -6,6 +6,7 @@ This project simulates a QPSK modulation system combined with OFDM channel codin
 ## Features
 - QPSK modulation and demodulation
 - OFDM channel coding with block-type pilots
+- Assume that the length of one frame is shorter than the coherent time
 - Simulation of the OFDM channel based on Amir Tadayon's work
 - Dataset generation through the `data_gen.py` script
 

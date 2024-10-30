@@ -9,4 +9,5 @@ This project simulates a QPSK modulation system combined with OFDM channel codin
 - Assume that the length of one frame is shorter than the coherent time
 - Simulation of the OFDM channel based on Amir Tadayon's work
 - Dataset generation through the `data_gen.py` script
+- The DnCNN_LS models were trained with SNR values at 0, 5, 10, 15, 20, and 25 dB, located in the results folder as `.keras` file, with 150 epochs
 

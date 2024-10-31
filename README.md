@@ -3,8 +3,8 @@
 ## Overview
 This project simulates a QPSK modulation system combined with OFDM channel coding. The implementation consists of two main files: `DnCNN_LS.py` and `data_gen.py`.
 ## References:
-  - [1](https://repository.library.northeastern.edu/files/neu:cj82pr619/fulltext.pdf) Amir Tadayon, Channel Estimation For OFDM Systems.
-  - [2](https://www.diva-portal.org/smash/get/diva2:996957/FULLTEXT01.pdf). Ov Edfors et Al, An introduction to orthogonal frequency-division multiplexing.
+  - [1](https://repository.library.northeastern.edu/files/neu:cj82pr619/fulltext.pdf) Amir Tadayon, ``Channel Estimation For OFDM Systems''.
+  - [2](https://www.diva-portal.org/smash/get/diva2:996957/FULLTEXT01.pdf). Ov Edfors et Al, ``An introduction to orthogonal frequency-division multiplexing''.
 
 ## Features
 - QPSK modulation and demodulation

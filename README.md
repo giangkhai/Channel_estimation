@@ -5,7 +5,7 @@ This project simulates a QPSK modulation system combined with OFDM channel codin
 ## References:
   - [1](https://repository.library.northeastern.edu/files/neu:cj82pr619/fulltext.pdf) Amir Tadayon, ``Channel Estimation For OFDM Systems''.
   - [2](https://www.diva-portal.org/smash/get/diva2:996957/FULLTEXT01.pdf). Ov Edfors et Al. , ``An introduction to orthogonal frequency-division multiplexing''.
-
+  - [3] (https://colab.research.google.com/drive/1WqbC9KtHXojvmQhkrdRA0H29DnFeSFlv?usp=sharing). MIMO LS and MMSE estimation.
 ## Features
 - QPSK modulation and demodulation
 - OFDM channel coding with block-type pilots
